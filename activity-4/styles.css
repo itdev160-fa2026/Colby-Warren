@@ -1,0 +1,146 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fdfcf7; 
+}
+
+.todo-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dcd7c9;
+}
+
+.input-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #dcd7c9;
+}
+
+.input-section h2 {
+    color: #0d1b2a; 
+    margin-bottom: 15px;
+}
+
+#taskInput {
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #b4a582;
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 10px;
+    background-color: #fffef9;
+}
+
+#taskInput:focus {
+    outline: none;
+    border-color: #c59d24; 
+    background-color: #fffcf2;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #0d1b2a; 
+    color: #f5f3e7; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #142c44; 
+}
+
+.list-section h2 {
+    color: #0d1b2a;
+    margin-bottom: 15px;
+}
+
+#taskCount {
+    font-size: 0.8em;
+    color: #7a6f52;
+    font-weight: normal;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    background-color: #fefcf6;
+    border: 1px solid #dcd7c9;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-item:hover {
+    background-color: #f9f6ec;
+    transform: translateY(-1px);
+}
+
+.task-item.done {
+    background-color: #e6f2e6;
+    color: #1b4332;
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+.task-item.done:hover {
+    background-color: #d2e9d2;
+}
+
+.task-text {
+    flex-grow: 1;
+}
+
+.task-status {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+.status-pending {
+    background-color: #fff8e1; 
+    color: #7c5e10;
+}
+
+.status-done {
+    background-color: #d9ecff; 
+    color: #0d1b2a;
+}
+
+.stats-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #dcd7c9;
+    text-align: center;
+}
+
+#taskStats {
+    font-size: 1.1em;
+    color: #7a6f52;
+}
+
+#output {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #faf6e9; 
+    border-radius: 5px;
+    border: 1px solid #e2dbc3;
+}
