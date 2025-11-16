@@ -1,0 +1,255 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #0b162a 0%, #16263d 100%);
+    min-height: 100vh;
+    color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+    color: #ff7a21;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: rgba(255, 122, 33, 0.9);
+}
+
+.game-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.game-section,
+.stats-section {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.game-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.game-info h2 {
+    margin: 0 0 15px 0;
+    color: #0b162a;
+}
+
+.status-message {
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 15px;
+    background: #fff3e6;
+    border-radius: 8px;
+    color: #c83803;
+}
+
+.status-message.winner {
+    background: #ffe1cc;
+    color: #c83803;
+}
+
+.status-message.draw {
+    background: #e6e6e6;
+    color: #333;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto 30px auto;
+    aspect-ratio: 1;
+}
+
+.cell {
+    background: #f8f9fa;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.cell:hover:not(.taken) {
+    background: #ffe1cc;
+    border-color: #c83803;
+    transform: scale(1.05);
+}
+
+.cell.taken {
+    cursor: not-allowed;
+}
+
+.cell.x {
+    color: #0b162a;
+}
+
+.cell.o {
+    color: #c83803;
+}
+
+.cell.winning {
+    background: #ff7a21;
+    border-color: #c83803;
+    color: white;
+}
+
+.game-controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn.primary {
+    background: linear-gradient(45deg, #0b162a, #16263d);
+    color: #ff7a21;
+}
+
+.btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(11, 22, 42, 0.5);
+}
+
+.btn.secondary {
+    background: #c83803;
+    color: white;
+}
+
+.btn.secondary:hover {
+    background: #a73002;
+}
+
+.btn.small {
+    padding: 8px 16px;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.stats-section h2 {
+    margin: 0 0 20px 0;
+    text-align: center;
+    color: #0b162a;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #e9ecef;
+}
+
+.stat-card.x-wins {
+    background: #e1e7ef;
+    border-color: #0b162a;
+}
+
+.stat-card.o-wins {
+    background: #ffe1cc;
+    border-color: #c83803;
+}
+
+.stat-value {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #0b162a;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9em;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#output {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+}
+
+#output h3 {
+    color: #0b162a;
+    margin-top: 0;
+}
+
+#output p {
+    color: #444;
+    text-align: left;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .game-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .game-section,
+    .stats-section {
+        padding: 20px;
+    }
+
+    .game-board {
+        max-width: 300px;
+    }
+
+    .cell {
+        font-size: 2em;
+    }
+
+    .game-controls {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
